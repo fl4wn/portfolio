@@ -25,7 +25,7 @@ export async function getStaticProps() {
   };
 }
 
-const Home: NextPage = ({ data }) => {
+const Home: NextPage = ({ data }: any) => {
   const [profile, setProfile] = useState<any>(data);
 
   return (
