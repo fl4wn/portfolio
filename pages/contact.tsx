@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -5,6 +6,12 @@ import Navbar from "../components/Navbar";
 const Contact = () => {
   return (
     <div className="text-white min-h-screen px-2 bg-gradient-to-br from-stone-900 to-neutral-900 flex flex-col">
+      <Head>
+        <title>Alkım Caner Soydan</title>
+        <meta name="description" content="Hi! I'm Alkım Caner" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Navbar />
 
       <main className="max-w-[48rem] mx-auto flex-1">

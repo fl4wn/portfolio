@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import Repo from "../components/Repo";
+import Head from "next/head";
 
 export async function getServerSideProps() {
   const res = await axios.get("https://api.github.com/users/fl4wn/repos", {
@@ -25,6 +26,12 @@ const Repositories = ({ data }: any) => {
 
   return (
     <div className="text-white min-h-screen px-2 bg-gradient-to-br from-stone-900 to-neutral-900 flex flex-col">
+      <Head>
+        <title>Alkım Caner Soydan</title>
+        <meta name="description" content="Hi! I'm Alkım Caner" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Navbar />
 
       <main className="max-w-[48rem] mx-auto flex-1">
