@@ -5,11 +5,24 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+//Logos
 import githubLogo from "../public/github.png";
 import linkedinLogo from "../public/linkedin.png";
 import stackoverflowLogo from "../public/stackoverflow.png";
 import twitterLogo from "../public/twitter.png";
 import dribbbleLogo from "../public/dribbble.png";
+//Icons
+import { AiFillHtml5 } from "react-icons/ai";
+import { FaBootstrap } from "react-icons/fa";
+import { DiCss3, DiPython, DiSass } from "react-icons/di";
+import {
+  SiFirebase,
+  SiJavascript,
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 export async function getStaticProps() {
   const res = await axios.get("https://api.github.com/users/fl4wn", {
@@ -29,7 +42,7 @@ const Home: NextPage = ({ data }: any) => {
   const [profile, setProfile] = useState<any>(data);
 
   return (
-    <div className="text-white min-h-screen px-2 bg-gradient-to-br from-stone-900 to-neutral-900 flex flex-col">
+    <div className="bg-slate-50">
       <Head>
         <title>Alkım Caner Soydan</title>
         <meta name="description" content="Hi! I'm Alkım Caner" />
@@ -38,41 +51,43 @@ const Home: NextPage = ({ data }: any) => {
 
       <Navbar />
 
-      <main className="max-w-[48rem] mx-auto flex-1">
-        <section className="flex flex-col items-center gap-8 md:flex-row">
+      <main>
+        <section className="h-screen flex flex-col items-center justify-center gap-8 md:flex-row bg-gradient-to-b from-slate-900 to-neutral-900">
           <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-lg">
             {profile?.avatar_url && (
               <Image src={profile.avatar_url} alt="" layout="fill"></Image>
             )}
           </div>
-          <div className="w-full md:w-1/2 flex flex-col gap-4 items-center">
-            <h1 className="text-center h-12 font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600">
+          <div className="flex flex-col items-center">
+            <h1 className="py-2 text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               Alkım Caner Soydan
             </h1>
-            <div className="text-center text-gray-300">Front-end Developer</div>
-            <div className="flex justify-center gap-4">
+            <div className="text-center text-slate-300 bg-slate-700 bg-opacity-50 p-2 rounded-md shadow-md select-none">
+              Front-end Developer
+            </div>
+            <div className="mt-8 flex justify-center gap-4">
               <a href="https://github.com/fl4wn">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
                   <Image src={githubLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://www.linkedin.com/in/alk%C4%B1m-caner-soydan-7160571a8">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
                   <Image src={linkedinLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://stackoverflow.com/users/17507992">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
                   <Image src={stackoverflowLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://twitter.com/fl4wn">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
                   <Image src={twitterLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://dribbble.com/flawn">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
                   <Image src={dribbbleLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
@@ -80,19 +95,63 @@ const Home: NextPage = ({ data }: any) => {
           </div>
         </section>
 
-        <section className="mt-12">
-          <h2 className="h-12 font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-teal-600 to-amber-400">
-            About me
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad unde rem
-            veritatis tempora eum facere totam nesciunt commodi incidunt at
-            voluptas neque adipisci accusantium, ratione ut sequi cumque,
-            ducimus nam.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ad unde rem veritatis tempora eum facere totam nesciunt commodi
-            incidunt at voluptas neque adipisci accusantium, ratione ut sequi
-            cumque, ducimus nam.
+        <section id="about" className="flex justify-center bg-slate-300 py-8">
+          <p className="text-3xl font-thin text-center text-slate-700 max-w-2xl">
+            Hello! I'm a front-end developer based in Sinop, Turkey. I love
+            building web apps.
           </p>
+        </section>
+
+        <section id="skills" className="max-w-2xl p-4 mx-auto">
+          <h2 className="py-8 w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-500 to-yellow-400">
+            My skills
+          </h2>
+          <div className="flex justify-center flex-wrap gap-8 text-slate-400">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <AiFillHtml5 className="text-4xl" />
+              <p>HTML</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <DiCss3 className="text-4xl" />
+              <p>CSS</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <SiJavascript className="text-4xl" />
+              <p>JAVASCRIPT</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <SiTypescript className="text-4xl" />
+              <p>TYPESCRIPT</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <SiReact className="text-4xl" />
+              <p>REACT</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <SiNextdotjs className="text-4xl" />
+              <p>NEXT.JS</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <SiTailwindcss className="text-4xl" />
+              <p>TAILWINDCSS</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <DiSass className="text-4xl" />
+              <p>SASS</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <FaBootstrap className="text-4xl" />
+              <p>BOOTSTRAP</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <SiFirebase className="text-4xl" />
+              <p>FIREBASE</p>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+              <DiPython className="text-4xl" />
+              <p>PYTHON</p>
+            </div>
+          </div>
         </section>
       </main>
 

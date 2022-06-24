@@ -2,7 +2,7 @@ import React from "react";
 
 const Repo = ({ repo }: any) => {
   return (
-    <div className="p-2 bg-stone-800 border-t border-t-stone-700 rounded-lg shadow-md">
+    <div className="p-2 bg-slate-800 border-t border-t-slate-700 rounded-lg shadow-md">
       <a href={repo.html_url} className="text-xl font-semibold hover:underline">
         {repo.name}
       </a>
