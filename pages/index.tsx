@@ -12,7 +12,7 @@ import stackoverflowLogo from "../public/stackoverflow.png";
 import twitterLogo from "../public/twitter.png";
 import dribbbleLogo from "../public/dribbble.png";
 //Icons
-import { AiFillHtml5 } from "react-icons/ai";
+import { AiFillHtml5, AiOutlineArrowDown } from "react-icons/ai";
 import { FaBootstrap } from "react-icons/fa";
 import { DiCss3, DiPython, DiSass } from "react-icons/di";
 import {
@@ -42,7 +42,7 @@ const Home: NextPage = ({ data }: any) => {
   const [profile, setProfile] = useState<any>(data);
 
   return (
-    <div className="bg-slate-50">
+    <div className="bg-slate-100">
       <Head>
         <title>Alkım Caner Soydan</title>
         <meta name="description" content="Hi! I'm Alkım Caner" />
@@ -67,44 +67,59 @@ const Home: NextPage = ({ data }: any) => {
             </div>
             <div className="mt-8 flex justify-center gap-4">
               <a href="https://github.com/fl4wn">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 hover:scale-125 transition ease-in-out duration-500">
                   <Image src={githubLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://www.linkedin.com/in/alk%C4%B1m-caner-soydan-7160571a8">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 hover:scale-125 transition ease-in-out duration-500">
                   <Image src={linkedinLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://stackoverflow.com/users/17507992">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 hover:scale-125 transition ease-in-out duration-500">
                   <Image src={stackoverflowLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://twitter.com/fl4wn">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 hover:scale-125 transition ease-in-out duration-500">
                   <Image src={twitterLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
               <a href="https://dribbble.com/flawn">
-                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 transition">
+                <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 hover:scale-125 transition ease-in-out duration-500">
                   <Image src={dribbbleLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
             </div>
           </div>
+          <a
+            href="#about"
+            className="animate-bounce absolute bottom-4 p-2 bg-white bg-opacity-75 text-2xl rounded-full"
+          >
+            <AiOutlineArrowDown />
+          </a>
         </section>
 
-        <section id="about" className="flex justify-center bg-slate-300 py-8">
-          <p className="text-3xl font-thin text-center text-slate-700 max-w-2xl">
-            Hello! I'm a front-end developer based in Sinop, Turkey. I love
+        <section
+          id="about"
+          className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
+        >
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">
+            ABOUT ME
+          </h2>
+          <p className="text-2xl font-thin text-slate-700 ">
+            Hello! I&apos;m a front-end developer based in Sinop, Turkey. I love
             building web apps.
           </p>
         </section>
 
-        <section id="skills" className="max-w-2xl p-4 mx-auto">
-          <h2 className="py-8 w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-500 to-yellow-400">
-            My skills
+        <section
+          id="skills"
+          className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
+        >
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-500 to-yellow-400">
+            MY SKILLS
           </h2>
           <div className="flex justify-center flex-wrap gap-8 text-slate-400">
             <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">

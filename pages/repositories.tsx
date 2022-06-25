@@ -37,7 +37,7 @@ const Repositories = ({ data }: any) => {
       <main className="md:w-[48rem] mx-auto flex-1 mt-[5rem]">
         <section>
           <h2 className="py-8 font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-emerald-500 to-slate-100">
-            Repositories
+            REPOSITORIES
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {repos.map((repo: any) => (
