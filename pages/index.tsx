@@ -50,6 +50,7 @@ const Home: NextPage = ({ data }: any) => {
   return (
     <div className="bg-slate-100">
       <Head>
+        <html lang="en" />
         <title>Alkım Caner Soydan</title>
         <meta name="description" content="Hi! I'm Alkım Caner" />
         <link rel="icon" href="/favicon.ico" />
@@ -225,11 +226,11 @@ const Home: NextPage = ({ data }: any) => {
           <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-sky-500 to-green-400">
             CONTACT ME
           </h2>
-          <p className="text-3xl text-slate-400 font-light">
+          <p className="text-2xl text-slate-400 font-light">
             You can reach me at:{" "}
             <a
               href="mailto:alkimcanersoydan@gmail.com"
-              className="text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-150 transition"
+              className="text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-150 transition"
             >
               alkimcanersoydan@gmail.com
             </a>

@@ -27,6 +27,7 @@ const Repositories = ({ data }: any) => {
   return (
     <div className="text-white min-h-screen px-2 bg-gradient-to-br from-slate-900 to-neutral-900 flex flex-col">
       <Head>
+        <html lang="en" />
         <title>Alkım Caner Soydan</title>
         <meta name="description" content="Hi! I'm Alkım Caner" />
         <link rel="icon" href="/favicon.ico" />
