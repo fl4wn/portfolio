@@ -1,16 +1,18 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+//Components
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Project from "../components/Project";
 //Logos
-import githubLogo from "../public/github.png";
-import linkedinLogo from "../public/linkedin.png";
-import stackoverflowLogo from "../public/stackoverflow.png";
-import twitterLogo from "../public/twitter.png";
-import dribbbleLogo from "../public/dribbble.png";
+import githubLogo from "../assets/logo/github.png";
+import linkedinLogo from "../assets/logo/linkedin.png";
+import stackoverflowLogo from "../assets/logo/stackoverflow.png";
+import twitterLogo from "../assets/logo/twitter.png";
+import dribbbleLogo from "../assets/logo/dribbble.png";
 //Icons
 import { AiFillHtml5, AiOutlineArrowDown } from "react-icons/ai";
 import { FaBootstrap } from "react-icons/fa";
@@ -23,6 +25,10 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+//GIFS
+import instagramBanner from "../assets/project/instagram_banner.gif";
+import twitterBanner from "../assets/project/twitter_banner.gif";
+import todoBanner from "../assets/project/todo_banner.png";
 
 export async function getStaticProps() {
   const res = await axios.get("https://api.github.com/users/fl4wn", {
@@ -105,7 +111,7 @@ const Home: NextPage = ({ data }: any) => {
           id="about"
           className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
         >
-          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">
             ABOUT ME
           </h2>
           <p className="text-2xl font-thin text-slate-700 ">
@@ -118,55 +124,116 @@ const Home: NextPage = ({ data }: any) => {
           id="skills"
           className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
         >
-          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-500 to-yellow-400">
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-pink-500 to-rose-300">
             MY SKILLS
           </h2>
-          <div className="flex justify-center flex-wrap gap-8 text-slate-400">
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+          <div className="flex justify-center flex-wrap gap-8 text-rose-400">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <AiFillHtml5 className="text-4xl" />
               <p>HTML</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <DiCss3 className="text-4xl" />
               <p>CSS</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <SiJavascript className="text-4xl" />
               <p>JAVASCRIPT</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <SiTypescript className="text-4xl" />
               <p>TYPESCRIPT</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <SiReact className="text-4xl" />
               <p>REACT</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <SiNextdotjs className="text-4xl" />
               <p>NEXT.JS</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <SiTailwindcss className="text-4xl" />
               <p>TAILWINDCSS</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <DiSass className="text-4xl" />
               <p>SASS</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <FaBootstrap className="text-4xl" />
               <p>BOOTSTRAP</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <SiFirebase className="text-4xl" />
               <p>FIREBASE</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-700 p-2 rounded-md shadow-md w-28 h-28">
+            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
               <DiPython className="text-4xl" />
               <p>PYTHON</p>
             </div>
           </div>
+        </section>
+
+        <section
+          id="projects"
+          className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
+        >
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">
+            PROJECTS
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <Project
+              title="Instagram Clone"
+              description="Instagram clone made with Next.js"
+              image={instagramBanner}
+              tech={[
+                "Next.js",
+                "NextAuth.js",
+                "React",
+                "Typescript",
+                "Firebase",
+                "Tailwindcss",
+                "Headless UI",
+              ]}
+              liveLink="https://instagram-clone-flawn.vercel.app"
+              sourceLink="https://github.com/fl4wn/instagram-clone"
+            />
+            <Project
+              title="Twitter Clone"
+              description="Twitter clone made with React"
+              image={twitterBanner}
+              tech={["React", "React Router", "Vite", "Firebase"]}
+              liveLink="https://twitter-clone-flawn.vercel.app"
+              sourceLink="https://github.com/fl4wn/twitter-clone"
+            />
+            <Project
+              title="To Do App"
+              description="Simple to do app made with React"
+              image={todoBanner}
+              tech={["React", "Vite"]}
+              liveLink="https://react-todo-flawn.vercel.app"
+              sourceLink="https://github.com/fl4wn/react-todo"
+            />
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
+        >
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-sky-500 to-green-400">
+            CONTACT ME
+          </h2>
+          <p className="text-3xl text-slate-400 font-light">
+            You can reach me at:{" "}
+            <a
+              href="mailto:alkimcanersoydan@gmail.com"
+              className="text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-150 transition"
+            >
+              alkimcanersoydan@gmail.com
+            </a>
+          </p>
         </section>
       </main>
 

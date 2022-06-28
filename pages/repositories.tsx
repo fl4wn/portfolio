@@ -34,9 +34,9 @@ const Repositories = ({ data }: any) => {
 
       <Navbar />
 
-      <main className="md:w-[48rem] mx-auto flex-1 mt-[5rem]">
-        <section>
-          <h2 className="py-8 font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-emerald-500 to-slate-100">
+      <main className="flex-1 mt-[5rem]">
+        <section className="max-w-4xl p-8 mx-auto flex flex-col gap-4">
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-cyan-500 to-rose-200">
             REPOSITORIES
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
