@@ -69,7 +69,7 @@ const Home: NextPage = ({ data }: any) => {
             <h1 className="py-2 text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               Alkım Caner Soydan
             </h1>
-            <div className="text-center text-slate-300 bg-slate-700 bg-opacity-50 p-2 rounded-md shadow-md select-none">
+            <div className="text-center text-slate-200 bg-slate-700 bg-opacity-50 p-2 rounded-md shadow-md select-none">
               Front-end Developer
             </div>
             <div className="mt-8 flex justify-center gap-4">
@@ -115,7 +115,7 @@ const Home: NextPage = ({ data }: any) => {
           <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">
             ABOUT ME
           </h2>
-          <p className="text-2xl font-thin text-slate-700 ">
+          <p className="text-2xl font-thin text-slate-500 ">
             Hello! I&apos;m a front-end developer based in Sinop, Turkey. I love
             building web apps.
           </p>
@@ -226,7 +226,7 @@ const Home: NextPage = ({ data }: any) => {
           <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-sky-500 to-green-400">
             CONTACT ME
           </h2>
-          <p className="text-2xl text-slate-400 font-light">
+          <p className="text-2xl text-slate-500 font-light">
             You can reach me at:{" "}
             <a
               href="mailto:alkimcanersoydan@gmail.com"

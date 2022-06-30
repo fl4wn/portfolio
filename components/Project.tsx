@@ -25,7 +25,7 @@ const Project = ({
       </div>
       <div className="p-4 flex flex-col gap-4 flex-1">
         <h3 className="text-slate-700 text-xl font-semibold">{title}</h3>
-        <p className="text-slate-700">{description}</p>
+        <p className="text-slate-500">{description}</p>
         <ul className="flex flex-wrap justify-center gap-2">
           {tech.map((e) => (
             <li
