@@ -66,31 +66,31 @@ const Navbar = () => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute flex flex-col overflow-hidden right-0 mt-2 w-48 origin-top-right divide-y divide-slate-700 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute flex flex-col overflow-hidden right-0 mt-2 w-48 origin-top-right divide-y divide-slate-800 border border-slate-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
               <Menu.Item>
                 <Link href="/">
-                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-800 hover:bg-slate-700 transition">
+                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-900 hover:bg-slate-800 transition">
                     HOME
                   </a>
                 </Link>
               </Menu.Item>
               <Menu.Item>
                 <Link href="/#projects">
-                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-800 hover:bg-slate-700 transition">
+                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-900 hover:bg-slate-800 transition">
                     PROJECTS
                   </a>
                 </Link>
               </Menu.Item>
               <Menu.Item>
                 <Link href="/repositories">
-                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-800 hover:bg-slate-700 transition">
+                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-900 hover:bg-slate-800 transition">
                     REPOSITORIES
                   </a>
                 </Link>
               </Menu.Item>
               <Menu.Item>
                 <Link href="/#contact">
-                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-800 hover:bg-slate-700 transition">
+                  <a className="p-2 text-slate-200 text-md font-medium bg-slate-900 hover:bg-slate-800 transition">
                     CONTACT
                   </a>
                 </Link>

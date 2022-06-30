@@ -25,7 +25,7 @@ const Repositories = ({ data }: any) => {
   const [repos, setRepos] = useState(data);
 
   return (
-    <div className="text-white min-h-screen px-2 bg-gradient-to-br from-slate-900 to-neutral-900 flex flex-col">
+    <div className="text-white min-h-screen px-2 flex flex-col bg-slate-900">
       <Head>
         <html lang="en" />
         <title>Alkım Caner Soydan</title>
@@ -37,7 +37,7 @@ const Repositories = ({ data }: any) => {
 
       <main className="flex-1 mt-[4rem]">
         <section className="max-w-4xl p-8 mx-auto flex flex-col gap-4">
-          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-rose-300 to-cyan-500">
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
             REPOSITORIES
           </h2>
           <div className="grid md:grid-cols-2 gap-4">

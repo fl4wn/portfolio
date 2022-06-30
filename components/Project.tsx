@@ -19,18 +19,18 @@ const Project = ({
   sourceLink,
 }: IProject) => {
   return (
-    <div className="bg-slate-200 bg-opacity-20 rounded-2xl overflow-hidden shadow-md w-full flex flex-col">
+    <div className="bg-slate-700 bg-opacity-20 border border-slate-800 rounded-2xl overflow-hidden shadow-lg w-full flex flex-col">
       <div className="w-full aspect-video relative transition duration-500">
         <Image src={image} alt="" layout="fill" objectFit="cover" />
       </div>
       <div className="p-4 flex flex-col gap-4 flex-1">
-        <h3 className="text-slate-700 text-xl font-semibold">{title}</h3>
-        <p className="text-slate-500">{description}</p>
+        <h3 className="text-slate-200 text-xl font-semibold">{title}</h3>
+        <p className="text-slate-400">{description}</p>
         <ul className="flex flex-wrap justify-center gap-2">
           {tech.map((e) => (
             <li
               key={Math.random()}
-              className="px-2 bg-sky-400 text-white font-medium rounded-md shadow-md"
+              className="px-2 bg-slate-700 bg-opacity-20 border border-slate-700 text-slate-500 font-medium rounded-md shadow-md"
             >
               {e}
             </li>

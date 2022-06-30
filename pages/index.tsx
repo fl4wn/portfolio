@@ -29,6 +29,7 @@ import {
 import instagramBanner from "../assets/project/instagram_banner.gif";
 import twitterBanner from "../assets/project/twitter_banner.gif";
 import todoBanner from "../assets/project/todo_banner.png";
+import Tech from "../components/Tech";
 
 export async function getStaticProps() {
   const res = await axios.get("https://api.github.com/users/fl4wn", {
@@ -48,7 +49,7 @@ const Home: NextPage = ({ data }: any) => {
   const [profile, setProfile] = useState<any>(data);
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-900">
       <Head>
         <html lang="en" />
         <title>Alkım Caner Soydan</title>
@@ -59,7 +60,7 @@ const Home: NextPage = ({ data }: any) => {
       <Navbar />
 
       <main>
-        <section className="h-screen flex flex-col items-center justify-center gap-8 md:flex-row bg-gradient-to-b from-slate-900 to-neutral-900">
+        <section className="h-screen flex flex-col items-center justify-center gap-8 md:flex-row border-b border-slate-800">
           <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-lg">
             {profile?.avatar_url && (
               <Image src={profile.avatar_url} alt="" layout="fill"></Image>
@@ -69,7 +70,7 @@ const Home: NextPage = ({ data }: any) => {
             <h1 className="py-2 text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               Alkım Caner Soydan
             </h1>
-            <div className="text-center text-slate-200 bg-slate-700 bg-opacity-50 p-2 rounded-md shadow-md select-none">
+            <div className="text-center text-slate-200 bg-slate-700 bg-opacity-20 border border-slate-800 p-2 rounded-md shadow-md select-none">
               Front-end Developer
             </div>
             <div className="mt-8 flex justify-center gap-4">
@@ -102,7 +103,7 @@ const Home: NextPage = ({ data }: any) => {
           </div>
           <a
             href="#about"
-            className="animate-bounce absolute bottom-4 p-2 bg-white bg-opacity-75 text-2xl rounded-full hover:bg-opacity-100 transition"
+            className="animate-bounce absolute bottom-4 p-2 bg-white bg-opacity-75 text-2xl rounded-full hover:bg-opacity-100 transition duration-500"
           >
             <AiOutlineArrowDown />
           </a>
@@ -115,7 +116,7 @@ const Home: NextPage = ({ data }: any) => {
           <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">
             ABOUT ME
           </h2>
-          <p className="text-2xl text-slate-500 ">
+          <p className="text-2xl text-slate-400 ">
             Hello! I&apos;m a front-end developer based in Sinop, Turkey. I love
             building web apps.
           </p>
@@ -125,54 +126,54 @@ const Home: NextPage = ({ data }: any) => {
           id="skills"
           className="max-w-4xl p-8 mx-auto flex flex-col gap-4"
         >
-          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-pink-500 to-rose-300">
+          <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-pink-500 to-pink-400">
             MY SKILLS
           </h2>
-          <div className="flex justify-center flex-wrap gap-8 text-rose-400">
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+          <div className="flex justify-center flex-wrap gap-8 text-slate-500">
+            <Tech>
               <AiFillHtml5 className="text-4xl" />
               <p>HTML</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <DiCss3 className="text-4xl" />
               <p>CSS</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <SiJavascript className="text-4xl" />
               <p>JAVASCRIPT</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <SiTypescript className="text-4xl" />
               <p>TYPESCRIPT</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <SiReact className="text-4xl" />
               <p>REACT</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <SiNextdotjs className="text-4xl" />
               <p>NEXT.JS</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <SiTailwindcss className="text-4xl" />
               <p>TAILWINDCSS</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <DiSass className="text-4xl" />
               <p>SASS</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <FaBootstrap className="text-4xl" />
               <p>BOOTSTRAP</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <SiFirebase className="text-4xl" />
               <p>FIREBASE</p>
-            </div>
-            <div className="flex flex-col justify-center items-center gap-2 bg-slate-200 bg-opacity-20 p-2 rounded-xl shadow-md w-28 h-28">
+            </Tech>
+            <Tech>
               <DiPython className="text-4xl" />
               <p>PYTHON</p>
-            </div>
+            </Tech>
           </div>
         </section>
 
@@ -227,14 +228,14 @@ const Home: NextPage = ({ data }: any) => {
             CONTACT ME
           </h2>
           <div className="flex flex-wrap gap-2">
-            <p className="text-2xl text-slate-500 w-fit">
+            <p className="text-2xl text-slate-400 w-fit">
               You can reach me at:
             </p>
             <a href="mailto:alkimcanersoydan@gmail.com" className="group w-fit">
               <span className="text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-150 transition duration-500">
                 alkimcanersoydan@gmail.com
               </span>
-              <div className="border-t border-pink-300 w-full origin-left scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+              <div className="border-t border-purple-500 w-full origin-left scale-0 group-hover:scale-100 transition-transform duration-500"></div>
             </a>
           </div>
         </section>
