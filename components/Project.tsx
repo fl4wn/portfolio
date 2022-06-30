@@ -30,7 +30,7 @@ const Project = ({
           {tech.map((e) => (
             <li
               key={Math.random()}
-              className="px-2 bg-sky-300 text-white font-medium rounded-md shadow-md"
+              className="px-2 bg-sky-400 text-white font-medium rounded-md shadow-md"
             >
               {e}
             </li>

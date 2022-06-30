@@ -102,7 +102,7 @@ const Home: NextPage = ({ data }: any) => {
           </div>
           <a
             href="#about"
-            className="animate-bounce absolute bottom-4 p-2 bg-white bg-opacity-75 text-2xl rounded-full"
+            className="animate-bounce absolute bottom-4 p-2 bg-white bg-opacity-75 text-2xl rounded-full hover:bg-opacity-100 transition"
           >
             <AiOutlineArrowDown />
           </a>
@@ -115,7 +115,7 @@ const Home: NextPage = ({ data }: any) => {
           <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-rose-500 to-orange-400">
             ABOUT ME
           </h2>
-          <p className="text-2xl font-thin text-slate-500 ">
+          <p className="text-2xl text-slate-500 ">
             Hello! I&apos;m a front-end developer based in Sinop, Turkey. I love
             building web apps.
           </p>
@@ -226,15 +226,17 @@ const Home: NextPage = ({ data }: any) => {
           <h2 className="w-fit font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-sky-500 to-green-400">
             CONTACT ME
           </h2>
-          <p className="text-2xl text-slate-500 font-light">
-            You can reach me at:{" "}
-            <a
-              href="mailto:alkimcanersoydan@gmail.com"
-              className="text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-150 transition"
-            >
-              alkimcanersoydan@gmail.com
+          <div className="flex flex-wrap gap-2">
+            <p className="text-2xl text-slate-500 w-fit">
+              You can reach me at:
+            </p>
+            <a href="mailto:alkimcanersoydan@gmail.com" className="group w-fit">
+              <span className="text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-150 transition duration-500">
+                alkimcanersoydan@gmail.com
+              </span>
+              <div className="border-t border-pink-300 w-full origin-left scale-0 group-hover:scale-100 transition-transform duration-500"></div>
             </a>
-          </p>
+          </div>
         </section>
       </main>
 
