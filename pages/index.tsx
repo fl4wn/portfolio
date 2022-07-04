@@ -79,7 +79,7 @@ const Home: NextPage = ({ data }: any) => {
                   <Image src={githubLogo} alt="" layout="fill"></Image>
                 </div>
               </a>
-              <a href="https://www.linkedin.com/in/alk%C4%B1m-caner-soydan-7160571a8">
+              <a href="https://www.linkedin.com/in/alkimcaner">
                 <div className="relative w-8 h-8 rounded-md overflow-hidden shadow-md hover:brightness-75 hover:scale-125 transition ease-in-out duration-500">
                   <Image src={linkedinLogo} alt="" layout="fill"></Image>
                 </div>
